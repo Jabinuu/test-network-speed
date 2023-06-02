@@ -1,0 +1,14 @@
+{
+  "name": "network-speed-test",
+  "version": "1.0.0",
+  "description": "一个轻量级的前端测网速的工具包",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "network"
+  ],
+  "author": "jiabin",
+  "license": "ISC"
+}
