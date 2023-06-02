@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // 编译后的es版本
+    "module": "esnext", // 前端模块化规范
+    "allowJs": true, // 允许引入js文件
+    "strict": true, // 开启严格模式
+    "baseUrl": "./",
+    "moduleResolution": "node", // 模块解析方式，按node的方式递归查找node_modulse
+    "outDir": "dist",
+    "sourceMap": false,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "lib": ["ES2015", "DOM", "es5", "es2015.promise", "es2015", "es2017", "esnext"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
