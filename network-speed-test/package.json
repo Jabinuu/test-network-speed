@@ -1,6 +1,6 @@
 {
   "name": "test-network-speed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个轻量级的前端测网速的工具包",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "dev":"tsc --watch"
   },
   "keywords": [
-    "network"
+    "network-speed-test"
   ],
   "files":["dist","README.md"],
   "author": "jiabin",
