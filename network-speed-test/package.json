@@ -1,5 +1,5 @@
 {
-  "name": "network-speed-test",
+  "name": "test-network-speed",
   "version": "1.0.0",
   "description": "一个轻量级的前端测网速的工具包",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "keywords": [
     "network"
   ],
+  "files":["dist"],
   "author": "jiabin",
   "license": "ISC"
 }
