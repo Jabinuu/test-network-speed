@@ -1,5 +1,6 @@
 enum CONSTANT {
   TIME = 6,
+  BIAS = 1.225,
 }
 
 export default {
@@ -28,10 +29,7 @@ export default {
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = () => {
           try {
-            if (
-              (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) ||
-              xhr.status === 304
-            ) {
+            if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
               count--;
               if (count <= 0) {
                 endTime = Date.now();
@@ -41,13 +39,16 @@ export default {
                     ((parseInt(fileSize) * CONSTANT.TIME) /
                       (endTime - startTime) /
                       Math.pow(1024, 2)) *
-                    1000;
+                    1000 *
+                    CONSTANT.BIAS;
 
                   resolve(speed.toFixed(1));
                 } else {
                   reject("响应首部字段获取失败");
                 }
               }
+            } else if (xhr.readyState === 4 && xhr.status >= 300) {
+              reject(`请求失败:${xhr.status}`);
             }
           } catch (error) {
             // 若xhr请求超时，readyState仍然变成4，但是访问status和statusText会发生错误，因此做好防护

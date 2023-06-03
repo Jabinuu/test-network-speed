@@ -31,6 +31,9 @@ watch(isLoading, async () => {
       //   734208
       // )
       speed.value = await nst.getSpeedByAjax('/api/v2-479db8ce71c66355d06f94b6ee9fee06_r.jpg')
+      // speed.value = await nst.getSpeedByAjax(
+      //   'https://pic3.zhimg.com/v2-479db8ce71c66355d06f94b6ee9fee06_r.jpg'
+      // )
     } catch (error) {
       console.log(error)
       isError.value = true
@@ -40,6 +43,7 @@ watch(isLoading, async () => {
   }
 })
 function onClickStart() {
+  isError.value = false
   disabled.value = true
   isStart.value = true
   isLoading.value = true

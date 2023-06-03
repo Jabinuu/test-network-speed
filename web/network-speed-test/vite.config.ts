@@ -23,7 +23,7 @@ export default defineConfig({
     // https: true,
     proxy: {
       '/api': {
-        changeOrigin: true,
+        changeOrigin: true, // 代理服务器把原host首部值修改成target的url，否则导致target服务器找不到对应的虚拟主机，返回500
         target: 'https://pic3.zhimg.com/',
         rewrite: (path) => path.replace(/^\/api/, '')
       }
