@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { ref, resolveDirective, watch } from 'vue'
-import nst from '../../../network-speed-test/dist/index'
+import nst from 'test-network-speed'
 import 'ant-design-vue/lib/button/style'
 import AButton from 'ant-design-vue/lib/button'
 const isLoading = ref(false) //正在测速的状态变量
