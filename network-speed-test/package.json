@@ -1,8 +1,8 @@
 {
   "name": "test-network-speed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个轻量级的前端测网速的工具包",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"tsc --watch"
@@ -10,7 +10,7 @@
   "keywords": [
     "network"
   ],
-  "files":["dist"],
+  "files":["dist","README.md"],
   "author": "jiabin",
   "license": "ISC"
 }
