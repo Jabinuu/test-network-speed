@@ -6,7 +6,7 @@
     >
     <div v-if="isStart" class="info">
       <p v-if="isLoading">正在测速...</p>
-      <p v-else-if="isError">测速失败x_x 请检查网络问题</p>
+      <p v-else-if="isError">测速失败x_x，请检查网络设置</p>
       <p v-else class="info">当前网速为：{{ speed }} MB/s</p>
     </div>
   </div>
@@ -25,14 +25,16 @@ const speed = ref(0)
 
 watch(isLoading, async () => {
   if (isLoading.value) {
-    // speed.value = await nst.getSpeedByImg(
-    //   'https://pic4.zhimg.com/v2-392227d18fe64dd8950e2b18eb279ecf_r.jpg',
-    //   734208
-    // )
-    speed.value = await nst.getSpeedByAjax(
-      'https://pic4.zhimg.com/v2-392227d18fe64dd8950e2b18eb279ecf_r.jpg'
-    )
-    // isError.value = true
+    try {
+      // speed.value = await nst.getSpeedByImg(
+      //   'https://pic4.zhimg.com/v2-392227d18fe64dd8950e2b18eb279ecf_r.jpg',
+      //   734208
+      // )
+      speed.value = await nst.getSpeedByAjax('/api/v2-479db8ce71c66355d06f94b6ee9fee06_r.jpg')
+    } catch (error) {
+      console.log(error)
+      isError.value = true
+    }
     isLoading.value = false
     disabled.value = false
   }

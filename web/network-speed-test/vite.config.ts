@@ -17,5 +17,16 @@ export default defineConfig({
         javascriptEnabled: true
       }
     }
+  },
+  server: {
+    port: 5173,
+    // https: true,
+    proxy: {
+      '/api': {
+        changeOrigin: true,
+        target: 'https://pic3.zhimg.com/',
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 })
