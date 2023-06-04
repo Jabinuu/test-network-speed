@@ -21,7 +21,7 @@ const isLoading = ref(false) //正在测速的状态变量
 const isError = ref(false) //是否捕获到错误
 const isStart = ref(false) //第一次测速
 const disabled = ref(false) //正在测速时，禁用测速按钮
-const speed = ref(0) //测得的网速值
+const speed = ref('0') //测得的网速值
 
 watch(isLoading, getNetworkSpeed)
 
