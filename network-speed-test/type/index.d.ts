@@ -1,6 +1,4 @@
 declare module "test-network-speed" {
-  export interface Nst {
-    getSpeedByImg: Function;
-    getSpeedByAjax: Function;
-  }
+  export function getSpeedByAjax(url: string): Promise<string>;
+  export function getSpeedByImg(url: string, fileSize: number): Promise<string>;
 }
