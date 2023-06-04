@@ -8,8 +8,8 @@ dependencies:
     specifier: ^4.1.3
     version: 4.1.3
   test-network-speed:
-    specifier: ^1.0.5
-    version: 1.0.5
+    specifier: ^1.0.8
+    version: 1.0.8
   vue:
     specifier: ^3.3.2
     version: 3.3.2
@@ -2398,8 +2398,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /test-network-speed@1.0.5:
-    resolution: {integrity: sha512-6Hhuy98ZQs2kr88bMyoITp/TBy5ZAelEEXvr0nt8wd0Gw+gb1pSgFWpb91SqkwSp7/qD/0352eF8JptiJx49Xw==}
+  /test-network-speed@1.0.8:
+    resolution: {integrity: sha512-cD4evkF24Fqzmba6SkRFDIWxKtEmevwiTJPcWAmfrxzc8ejW9dQirafp52mmSs8vLtbeJ5lFdvPC7YoMu92VbQ==}
     dev: false
 
   /text-table@0.2.0:

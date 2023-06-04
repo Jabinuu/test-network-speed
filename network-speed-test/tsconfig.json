@@ -10,6 +10,8 @@
     "sourceMap": false,
     "noImplicitAny": false,
     "noImplicitThis": true,
+    "declaration": true,   // 编译后自动生成类型声明文件.d.ts
+    "declarationDir": "./types",     // .d.ts 存放路径
     "lib": ["ES2015", "DOM", "es5", "es2015.promise", "es2015", "es2017", "esnext"]
   },
   "include": ["src/**/*"],
